@@ -2,6 +2,9 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -15,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/print")
 public class print extends HttpServlet {
+	private int hitCount = 0;
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -35,10 +39,21 @@ public class print extends HttpServlet {
 		
 		Date date = new Date(); 
 		
+		
+		
 		response.setIntHeader("Refresh", 5);
+		
+		
 		out.println("<h2>"+"Current Date & Time: " +date.toString()+"</h2>");
+
+		DateFormat df = new SimpleDateFormat("yy/MM/dd HH:mm:ss" );
+		Calendar cal = Calendar.getInstance();
+		out.println("<h2>"+"Current Date & Time: " +df.format(cal.getTime())+"</h2>");
+
 		
 		
+		hitCount++;
+		out.println("<h3> Total number of hits: "+hitCount+"</h3>");
 		
 		
 //		String name = request.getParameter("name");
