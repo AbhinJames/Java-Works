@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta charset="ISO-8859-1">
+<title>Exercise3.3</title>
+</head>
+<body>
+<form action="DataEntry" method="post">
+<fieldset>
+<legend>Inscription</legend>
+<label>Vous pouvez vous inscrire via ce formulaire</label><br><br>
+<label for="nom">Nom</label>
+<input type="text" id="nom" name="nom"><br><br>
+<label for="prenom">Prenom</label>
+<input type="text" id="prenom" name="prenom"><br><br>
+<label for="cours">Cours</label>
+<select id="cours" name="cours">
+  <option value="java3">Java 3</option>
+  <option value="p77">p77</option>
+  <option value="java2">Java2</option>
+  <option value="java1">Java1</option>
+</select>
+
+<input type="radio" id="soir" name="seance" value="Soir">
+<label for="soir">Soir</label>
+<input type="radio" id="jour" name="seance" value="Jour">
+<label for="soir">Jour</label> &nbsp;
+
+<label for="sessionhiver"> Session Hiver</label>
+<input type="checkbox" id="sessionhiver" name="sessions" value="sessionhiver">
+<label for="sessionete">Session ETE</label>
+<input type="checkbox" id="sessionete" name="sessions" value="sessionete">
+<br><br>
+<input type="submit" value="Inscription">
+
+</fieldset>
+</form>
+
+
+
+</body>
+</html>
